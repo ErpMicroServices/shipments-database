@@ -132,3 +132,18 @@ create table if not exists item_issuance_role(
   described_by uuid not null references item_issuance_role_type(id),
   CONSTRAINT item_issuance_role_pk PRIMARY key(id)
 );
+
+create table if not exists document_type(
+  id uuid DEFAULT uuid_generate_v4(),
+  description text not null CONSTRAINT _type_description_not_empty CHECK (description <> ''),
+  CONSTRAINT _type_pk PRIMARY key(id)
+);
+
+create table if not exists document(
+  id uuid DEFAULT uuid_generate_v4(),
+  described_by uuid not null references document_type(id),
+  shipment_package_id uuid not null references shipment_package(id),
+  shipment_item_id uuid not null references shipment_item(id),
+  shipment_id uuid not null references shipment(id),
+  CONSTRAINT document_pk PRIMARY key(id)
+);
