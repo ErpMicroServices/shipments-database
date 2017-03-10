@@ -47,3 +47,18 @@ create table if not exists shipment_status(
   described_by uuid not null references shipment_status_type(id),
   CONSTRAINT shipment_status_pk PRIMARY key(id)
 );
+
+create table if not exists shipment_item_feature(
+  id uuid DEFAULT uuid_generate_v4(),
+  shipment_item_id uuid not null references shipment_item(id),
+  product_feature_id uuid not null,
+  CONSTRAINT shipment_item_feature_pk PRIMARY key(id)
+);
+
+create table if not exists order_shipment(
+  id uuid DEFAULT uuid_generate_v4(),
+  quantity bigint not null default 1,
+  shipment_item_id uuid not null references shipment_item(id),
+  order_item_id uuid not null,
+  CONSTRAINT order_shipment_pk PRIMARY key(id)
+);
