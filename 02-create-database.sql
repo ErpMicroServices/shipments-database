@@ -147,3 +147,27 @@ create table if not exists document(
   shipment_id uuid not null references shipment(id),
   CONSTRAINT document_pk PRIMARY key(id)
 );
+
+create table if not exists shipment_method_type(
+  id uuid DEFAULT uuid_generate_v4(),
+  description text not null CONSTRAINT shipment_method_type_description_not_empty CHECK (description <> ''),
+  CONSTRAINT shipment_method_type_pk PRIMARY key(id)
+);
+
+create table if not exists shipment_route_segment(
+  id uuid DEFAULT uuid_generate_v4(),
+  actual_start timestamp not null default current_timestamp,
+  actual_arrival timestamp not null default current_timestamp,
+  estimated_start timestamp not null default current_timestamp,
+  estimated_arrival timestamp not null default current_timestamp,
+  start_mileage bigint,
+  end_mileage bigint,
+  fuel_used double precision,
+  shipment_id uuid not null references shipment(id),
+  shipped_via uuid not null references shipment_method_type(id),
+  fixed_asset_id uuid,
+  from_facility_id uuid,
+  to_facility_id uuid,
+  shipped_by uuid,
+  CONSTRAINT shipment_route_segment_pk PRIMARY key(id)
+);
