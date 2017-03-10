@@ -96,3 +96,39 @@ create table if not exists shipment_receipt(
   rejection_reason_id uuid not null references rejection_reason(id),
   CONSTRAINT shipment_receipt_pk PRIMARY key(id)
 );
+
+create table if not exists picklist(
+  id uuid DEFAULT uuid_generate_v4(),
+  date_create date not null default current_date,
+  CONSTRAINT _pk PRIMARY key(id)
+);
+
+create table if not exists picklist_item(
+  id uuid DEFAULT uuid_generate_v4(),
+  quantity bigint not null default 1,
+  picklist_id uuid not null references picklist(id),
+  issued_form_inventory_item uuid not null,
+  CONSTRAINT picklist_item_pk PRIMARY key(id)
+);
+create table if not exists item_issuance(
+  id uuid DEFAULT uuid_generate_v4(),
+  issued timestamp not null default current_timestamp,
+  quantity bigint not null default 1,
+  issued_for uuid not null references shipment_item(id),
+  issued_from_inventory_item_id uuid not null,
+  issued_according_to uuid not null references picklist_item(id),
+  CONSTRAINT item_issuance_pk PRIMARY key(id)
+);
+create table if not exists item_issuance_role_type(
+  id uuid DEFAULT uuid_generate_v4(),
+  description text not null CONSTRAINT item_issuance_role_type_description_not_empty CHECK (description <> ''),
+  CONSTRAINT item_issuance_role_type_pk PRIMARY key(id)
+);
+
+create table if not exists item_issuance_role(
+  id uuid DEFAULT uuid_generate_v4(),
+  item_issuance_id uuid not null references item_issuance(id),
+  party_id uuid not null,
+  described_by uuid not null references item_issuance_role_type(id),
+  CONSTRAINT item_issuance_role_pk PRIMARY key(id)
+);
