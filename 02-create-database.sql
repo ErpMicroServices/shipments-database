@@ -62,3 +62,37 @@ create table if not exists order_shipment(
   order_item_id uuid not null,
   CONSTRAINT order_shipment_pk PRIMARY key(id)
 );
+
+create table if not exists shipment_package(
+  id uuid DEFAULT uuid_generate_v4(),
+  date_created date not null default current_date,
+  CONSTRAINT shipment_package_pk PRIMARY key(id)
+);
+
+create table if not exists packaging_content(
+  id uuid DEFAULT uuid_generate_v4(),
+  quantity bigint not null default 1,
+  shipment_package_id uuid not null references shipment_package(id),
+  shipment_item_id uuid not null references shipment_item(id),
+  CONSTRAINT packaging_content_pk PRIMARY key(id)
+);
+
+create table if not exists rejection_reason(
+  id uuid DEFAULT uuid_generate_v4(),
+  description text not null CONSTRAINT rejection_reason_description_not_empty CHECK (description <> ''),
+  CONSTRAINT rejection_reason_pk PRIMARY key(id)
+);
+
+create table if not exists shipment_receipt(
+  id uuid DEFAULT uuid_generate_v4(),
+  recieved_at timestamp not null default current_timestamp,
+  description text,
+  quantity_accepted bigint not null default 1,
+  quantity_rejected bigint not null default 0,
+  good_id uuid not null,
+  inventory_item_id uuid not null,
+  shipment_package_id uuid not null references shipment_package(id),
+  order_item_id uuid not null,
+  rejection_reason_id uuid not null references rejection_reason(id),
+  CONSTRAINT shipment_receipt_pk PRIMARY key(id)
+);
