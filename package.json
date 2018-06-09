@@ -1,6 +1,6 @@
 {
-  "name": "shipment-database",
-  "version": "0.0.0",
+  "name": "shipments-database",
+  "version": "1.0.0",
   "description": "Data for the domain",
   "author": {
     "name": "Jim Barrows",
@@ -8,9 +8,9 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "build": "docker build --tag erpmicroservices/shipment-database --rm .",
-    "start": "docker run --publish 5432:5432 --name shipment-database-1 erpmicroservices/shipment-database",
-    "test": "cucumber-js --compiler es6:babel-core/register  -r ./features ../shipment-features"
+    "db_admin" : "docker run --detach --publish 5050:5050 --name shipments-database-pgadmin --link shipments-database:db thajeztah/pgadmin4",
+	"start" : "docker run --publish 5432:5432 --name shipments-database erpmicroservices/-shipments-database",
+	"test" : "cucumber-js --tags @shipments_database --compiler es6:babel-core/register  -r ./features ../shipments-features"
   },
   "repository": {
     "type": "git",
