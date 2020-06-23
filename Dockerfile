@@ -1,4 +1,4 @@
-FROM postgres:9.6.1
+FROM postgres:10
 
 ENV POSTGRES_DB=shipment_database
 ENV POSTGRES_USER=shipment_database
