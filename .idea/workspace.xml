@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757df288-f749-4b99-92bb-75f57eced017" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database_change_log.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-install-uuid.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/01-install-extensions.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-create-database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/02-create-database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-initial-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/03-initial-data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +28,47 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shipment_database: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shipment_database: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shipment_database: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shipment_database: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="Git.Settings">
@@ -106,7 +144,7 @@
       <recent name="$PROJECT_DIR$/sql" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.build">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -174,9 +212,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.clean" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build:docker" />
         <item itemvalue="npm.build:database" />
       </list>
@@ -194,23 +232,7 @@
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:shipment_database@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@6678ae7b" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-                <item name="Compose: docker-compose.yml" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-                <item name="Compose: docker-compose.yml" type="9fbbdea:ServiceModel$ServiceNode" />
-                <item name="database" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -226,7 +248,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592931400932</updated>
-      <workItem from="1592931405437" duration="3330000" />
+      <workItem from="1592931405437" duration="4421000" />
+      <workItem from="1592944436911" duration="251000" />
     </task>
     <task id="LOCAL-00001" summary="Getting ready to go.">
       <created>1592938512825</created>
@@ -249,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592939196305</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Made this look like the other projects and the npm scripts work.">
+      <created>1592940388526</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592940388526</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,36 +290,37 @@
     <MESSAGE value="Getting ready to go." />
     <MESSAGE value="got the package.json updated." />
     <MESSAGE value="Updated the postgres version." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the postgres version." />
+    <MESSAGE value="Made this look like the other projects and the npm scripts work." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made this look like the other projects and the npm scripts work." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1320" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592940290001">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
     <state x="1320" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940290001" />
-    <state x="1220" y="420" key="CommitChangelistDialog2" timestamp="1592939196198">
+    <state x="1220" y="420" key="CommitChangelistDialog2" timestamp="1592940388397">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state x="1220" y="420" key="CommitChangelistDialog2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592939196198" />
-    <state width="3398" height="308" key="GridCell.Tab.0.bottom" timestamp="1592940355319">
+    <state x="1220" y="420" key="CommitChangelistDialog2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940388397" />
+    <state width="3398" height="308" key="GridCell.Tab.0.bottom" timestamp="1592944905975">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.bottom/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940355319" />
-    <state width="3398" height="308" key="GridCell.Tab.0.center" timestamp="1592940355317">
+    <state width="3398" height="308" key="GridCell.Tab.0.bottom/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944905975" />
+    <state width="3398" height="308" key="GridCell.Tab.0.center" timestamp="1592944905972">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.center/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940355317" />
-    <state width="3398" height="308" key="GridCell.Tab.0.left" timestamp="1592940355315">
+    <state width="3398" height="308" key="GridCell.Tab.0.center/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944905972" />
+    <state width="3398" height="308" key="GridCell.Tab.0.left" timestamp="1592944905971">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.left/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940355315" />
-    <state width="3398" height="308" key="GridCell.Tab.0.right" timestamp="1592940355318">
+    <state width="3398" height="308" key="GridCell.Tab.0.left/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944905971" />
+    <state width="3398" height="308" key="GridCell.Tab.0.right" timestamp="1592944905973">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.right/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940355318" />
-    <state x="1320" y="460" key="Vcs.Push.Dialog.v2" timestamp="1592939326743">
+    <state width="3398" height="308" key="GridCell.Tab.0.right/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944905973" />
+    <state x="1320" y="460" key="Vcs.Push.Dialog.v2" timestamp="1592940392892">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state x="1320" y="460" key="Vcs.Push.Dialog.v2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592939326743" />
+    <state x="1320" y="460" key="Vcs.Push.Dialog.v2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940392892" />
   </component>
 </project>

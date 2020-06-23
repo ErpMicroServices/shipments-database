@@ -9,13 +9,13 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "npm run build:database; npm run build:docker",
-    "build:docker": "docker build --tag erpmicroservices/order-database --rm .",
+    "build:docker": "docker build --tag erpmicroservices/shipment-database --rm .",
     "build:database": "mkdir -p build;liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='offline:postgresql' updateSql > build/database_up.sql",
-    "clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/order-database; yes | docker volume prune; docker rm order-database",
-    "update_database": "liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/order' --username=order --password=order update",
-    "push": "docker push erpmicroservices/order-database:latest",
-    "start": "docker run --publish 5432:5432 --name order-database erpmicroservices/order-database",
-    "test": "cucumber-js --tags @party_database  --require-module @babel/register --require-module @babel/polyfill  -r ./features ../order-features"
+    "clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/shipment-database; yes | docker volume prune; docker rm shipment-database",
+    "update_database": "liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/shipment' --username=shipment --password=shipment update",
+    "push": "docker push erpmicroservices/shipment-database:latest",
+    "start": "docker run --publish 5432:5432 --name shipment-database erpmicroservices/shipment-database",
+    "test": "cucumber-js --tags @party_database  --require-module @babel/register --require-module @babel/polyfill  -r ./features ../shipment-features"
   },
   "repository": {
     "type": "git",
