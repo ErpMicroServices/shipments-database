@@ -8,9 +8,14 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "build": "docker build --tag erpmicroservices/shipment-database --rm .",
-    "start": "docker run --publish 5432:5432 --name shipment-database-1 erpmicroservices/shipment-database",
-    "test": "cucumber-js --compiler es6:babel-core/register  -r ./features ../shipment-features"
+    "build": "npm run build:database; npm run build:docker",
+    "build:docker": "docker build --tag erpmicroservices/order-database --rm .",
+    "build:database": "mkdir -p build;liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='offline:postgresql' updateSql > build/database_up.sql",
+    "clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/order-database; yes | docker volume prune; docker rm order-database",
+    "update_database": "liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/order' --username=order --password=order update",
+    "push": "docker push erpmicroservices/order-database:latest",
+    "start": "docker run --publish 5432:5432 --name order-database erpmicroservices/order-database",
+    "test": "cucumber-js --tags @party_database  --require-module @babel/register --require-module @babel/polyfill  -r ./features ../order-features"
   },
   "repository": {
     "type": "git",
