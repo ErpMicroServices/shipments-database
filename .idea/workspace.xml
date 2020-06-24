@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757df288-f749-4b99-92bb-75f57eced017" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/02-create-database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/02-create-database.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,39 +31,39 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="shipments_database@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="shipments_database@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="shipments_database@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shipment_database: database" type="162271b6:PgImplModel$Database" />
+        <item name="shipments_database: database" type="162271b6:PgImplModel$Database" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="shipments_database@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shipment_database: database" type="162271b6:PgImplModel$Database" />
+        <item name="shipments_database: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="shipments_database@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shipment_database: database" type="162271b6:PgImplModel$Database" />
+        <item name="shipments_database: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shipment_database@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="shipments_database@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shipment_database: database" type="162271b6:PgImplModel$Database" />
+        <item name="shipments_database: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
@@ -212,9 +212,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.clean" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.build:docker" />
         <item itemvalue="npm.build:database" />
       </list>
@@ -249,7 +249,7 @@
       <option name="presentableId" value="Default" />
       <updated>1592931400932</updated>
       <workItem from="1592931405437" duration="4421000" />
-      <workItem from="1592944436911" duration="251000" />
+      <workItem from="1592944436911" duration="2909000" />
     </task>
     <task id="LOCAL-00001" summary="Getting ready to go.">
       <created>1592938512825</created>
@@ -279,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592940388526</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Got it working with the rest endpoint.">
+      <created>1592944924820</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592944924820</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,36 +298,41 @@
     <MESSAGE value="got the package.json updated." />
     <MESSAGE value="Updated the postgres version." />
     <MESSAGE value="Made this look like the other projects and the npm scripts work." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made this look like the other projects and the npm scripts work." />
+    <MESSAGE value="Got it working with the rest endpoint." />
+    <option name="LAST_COMMIT_MESSAGE" value="Got it working with the rest endpoint." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1320" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592940290001">
+    <state x="1320" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593006968488">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state x="1320" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940290001" />
-    <state x="1220" y="420" key="CommitChangelistDialog2" timestamp="1592940388397">
+    <state x="1320" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593006968488" />
+    <state x="1220" y="420" key="CommitChangelistDialog2" timestamp="1592944924643">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state x="1220" y="420" key="CommitChangelistDialog2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940388397" />
-    <state width="3398" height="308" key="GridCell.Tab.0.bottom" timestamp="1592944905975">
+    <state x="1220" y="420" key="CommitChangelistDialog2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944924643" />
+    <state width="3398" height="308" key="GridCell.Tab.0.bottom" timestamp="1593006914314">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.bottom/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944905975" />
-    <state width="3398" height="308" key="GridCell.Tab.0.center" timestamp="1592944905972">
+    <state width="3398" height="308" key="GridCell.Tab.0.bottom/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593006914314" />
+    <state width="3398" height="308" key="GridCell.Tab.0.center" timestamp="1593006914311">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.center/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944905972" />
-    <state width="3398" height="308" key="GridCell.Tab.0.left" timestamp="1592944905971">
+    <state width="3398" height="308" key="GridCell.Tab.0.center/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593006914311" />
+    <state width="3398" height="308" key="GridCell.Tab.0.left" timestamp="1593006914310">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.left/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944905971" />
-    <state width="3398" height="308" key="GridCell.Tab.0.right" timestamp="1592944905973">
+    <state width="3398" height="308" key="GridCell.Tab.0.left/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593006914310" />
+    <state width="3398" height="308" key="GridCell.Tab.0.right" timestamp="1593006914312">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.right/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592944905973" />
+    <state width="3398" height="308" key="GridCell.Tab.0.right/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593006914312" />
     <state x="1320" y="460" key="Vcs.Push.Dialog.v2" timestamp="1592940392892">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
     <state x="1320" y="460" key="Vcs.Push.Dialog.v2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1592940392892" />
+    <state x="1385" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1593006810313">
+      <screen x="0" y="0" width="3440" height="1440" />
+    </state>
+    <state x="1385" y="331" width="670" height="676" key="search.everywhere.popup/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593006810313" />
   </component>
 </project>
