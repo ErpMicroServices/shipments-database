@@ -202,3 +202,21 @@ create table if not exists shipment_route_segment
     shipped_by        uuid,
     CONSTRAINT shipment_route_segment_pk PRIMARY key (id)
 );
+
+create table if not exists shipment_receipt_role_type
+(
+    id          uuid DEFAULT uuid_generate_v4(),
+    description text not null
+        CONSTRAINT shipment_receipt_role_type_description_not_empty CHECK (description <> ''),
+    parent_id   UUID REFERENCES shipment_receipt_role_type (id),
+    CONSTRAINT shipment_receipt_role_type_pk PRIMARY key (id)
+);
+
+create table if not exists shipment_receipt_role
+(
+    id                            uuid DEFAULT uuid_generate_v4(),
+    shipment_receipt_id           uuid not null references shipment_receipt (id),
+    shipment_receipt_role_type_id uuid not null references shipment_receipt_role_type (id),
+    party_id                      uuid not null,
+    CONSTRAINT shipment_receipt_role_pk PRIMARY key (id)
+);
