@@ -30,11 +30,11 @@ create table if not exists shipment
 create table if not exists shipment_item
 (
     id                  uuid   DEFAULT uuid_generate_v4(),
+    shipment_id         uuid   not null references shipment (id),
     sequence            bigint not null,
     quantity            bigint default 1,
     content_description text,
-    generating          uuid references shipment_item (id),
-    response_to         uuid references shipment_item (id),
+    parent_id           uuid references shipment_item (id),
     shipment_of_good_id uuid   not null,
     CONSTRAINT shipment_item_pk PRIMARY key (id)
 );
