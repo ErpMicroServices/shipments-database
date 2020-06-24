@@ -122,20 +122,20 @@ create table if not exists picklist
 
 create table if not exists picklist_item
 (
-    id                         uuid            DEFAULT uuid_generate_v4(),
-    quantity                   bigint not null default 1,
-    picklist_id                uuid   not null references picklist (id),
-    issued_form_inventory_item uuid   not null,
+    id                uuid            DEFAULT uuid_generate_v4(),
+    quantity          bigint not null default 1,
+    picklist_id       uuid   not null references picklist (id),
+    inventory_item_id uuid   not null,
     CONSTRAINT picklist_item_pk PRIMARY key (id)
 );
 create table if not exists item_issuance
 (
-    id                            uuid               DEFAULT uuid_generate_v4(),
-    issued                        timestamp not null default current_timestamp,
-    quantity                      bigint    not null default 1,
-    issued_for                    uuid      not null references shipment_item (id),
-    issued_from_inventory_item_id uuid      not null,
-    issued_according_to           uuid      not null references picklist_item (id),
+    id                uuid               DEFAULT uuid_generate_v4(),
+    issued            timestamp not null default current_timestamp,
+    quantity          bigint    not null default 1,
+    shipment_item_id  uuid      not null references shipment_item (id),
+    inventory_item_id uuid      not null,
+    picklist_item_id uuid      not null references picklist_item (id),
     CONSTRAINT item_issuance_pk PRIMARY key (id)
 );
 create table if not exists item_issuance_role_type
