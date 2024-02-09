@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="757df288-f749-4b99-92bb-75f57eced017" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="757df288-f749-4b99-92bb-75f57eced017" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +169,7 @@
       <updated>1592931400932</updated>
       <workItem from="1592931405437" duration="4421000" />
       <workItem from="1592944436911" duration="11005000" />
-      <workItem from="1614004943445" duration="72000" />
+      <workItem from="1614004943445" duration="141000" />
     </task>
     <task id="LOCAL-00001" summary="Getting ready to go.">
       <created>1592938512825</created>
@@ -268,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593025326929</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated dependency versions.">
+      <created>1614005044961</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614005044961</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,44 +288,17 @@
     <MESSAGE value="Shipping Documents" />
     <MESSAGE value="Shipment route" />
     <MESSAGE value="Adding the change log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding the change log" />
+    <MESSAGE value="Updated dependency versions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated dependency versions." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1320" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593006968488">
+    <state x="1210" y="410" key="CommitChangelistDialog2" timestamp="1614005044798">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state x="1320" y="385" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593006968488" />
-    <state x="1220" y="420" key="CommitChangelistDialog2" timestamp="1593025394771">
+    <state x="1210" y="410" key="CommitChangelistDialog2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1614005044798" />
+    <state x="1320" y="457" key="Vcs.Push.Dialog.v2" timestamp="1614005048089">
       <screen x="0" y="0" width="3440" height="1440" />
     </state>
-    <state x="1220" y="420" key="CommitChangelistDialog2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593025394771" />
-    <state width="3398" height="308" key="GridCell.Tab.0.bottom" timestamp="1593027206572">
-      <screen x="0" y="0" width="3440" height="1440" />
-    </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.bottom/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593027206572" />
-    <state width="3398" height="308" key="GridCell.Tab.0.center" timestamp="1593027206571">
-      <screen x="0" y="0" width="3440" height="1440" />
-    </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.center/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593027206571" />
-    <state width="3398" height="308" key="GridCell.Tab.0.left" timestamp="1593027206570">
-      <screen x="0" y="0" width="3440" height="1440" />
-    </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.left/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593027206570" />
-    <state width="3398" height="308" key="GridCell.Tab.0.right" timestamp="1593027206571">
-      <screen x="0" y="0" width="3440" height="1440" />
-    </state>
-    <state width="3398" height="308" key="GridCell.Tab.0.right/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593027206571" />
-    <state x="1370" y="421" width="811" height="598" key="NewModule_or_Project.wizard" timestamp="1593027001975">
-      <screen x="0" y="0" width="3440" height="1440" />
-    </state>
-    <state x="1370" y="421" width="811" height="598" key="NewModule_or_Project.wizard/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593027001975" />
-    <state x="1320" y="460" key="Vcs.Push.Dialog.v2" timestamp="1593025398369">
-      <screen x="0" y="0" width="3440" height="1440" />
-    </state>
-    <state x="1320" y="460" key="Vcs.Push.Dialog.v2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593025398369" />
-    <state x="1385" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1593006810313">
-      <screen x="0" y="0" width="3440" height="1440" />
-    </state>
-    <state x="1385" y="331" width="670" height="676" key="search.everywhere.popup/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1593006810313" />
+    <state x="1320" y="457" key="Vcs.Push.Dialog.v2/0.0.3440.1440/3440.0.1792.1120@0.0.3440.1440" timestamp="1614005048089" />
   </component>
 </project>
