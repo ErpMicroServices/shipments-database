@@ -8,13 +8,15 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "build": "npm run build:database; npm run build:docker",
-    "build:docker": "docker build --tag erpmicroservices/shipment-database --rm .",
-    "build:database": "mkdir -p build;liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='offline:postgresql' updateSql > build/database_up.sql",
-    "clean": "rm -rf build; rm -rf generated-sql;yes | docker rmi erpmicroservices/shipment-database; yes | docker volume prune; docker rm shipment-database",
-    "update_database": "liquibase-3.5.3-bin/liquibase --changeLogFile=./database_change_log.yml --url='jdbc:postgresql://localhost/shipment' --username=shipment --password=shipment update",
-    "push": "docker push erpmicroservices/shipment-database:latest",
-    "start": "docker run --publish 5432:5432 --name shipment-database erpmicroservices/shipment-database",
+    "build": "npm run build:database && npm run build:docker",
+    "build:docker": "docker build --tag erpmicroservices/shipments-database --rm .",
+    "build:database": "mkdir -p build && cat sql/V_ship*.sql > build/database_up.sql",
+    "clean": "rm -rf build && rm -rf generated-sql && yes | docker rmi --force erpmicroservices/shipments-database && yes | docker volume prune && docker rm shipments-database",
+    "migrate": "npx flyway -configFiles=flyway.conf -url=jdbc:postgresql://${DB_HOST:-localhost}:${DB_PORT:-5432}/${DB_NAME:-shipments} -user=${DB_USER:-shipments} -password=${DB_PASSWORD:-shipments} migrate",
+    "migrate:info": "npx flyway -configFiles=flyway.conf -url=jdbc:postgresql://${DB_HOST:-localhost}:${DB_PORT:-5432}/${DB_NAME:-shipments} -user=${DB_USER:-shipments} -password=${DB_PASSWORD:-shipments} info",
+    "migrate:validate": "npx flyway -configFiles=flyway.conf -url=jdbc:postgresql://${DB_HOST:-localhost}:${DB_PORT:-5432}/${DB_NAME:-shipments} -user=${DB_USER:-shipments} -password=${DB_PASSWORD:-shipments} validate",
+    "push": "docker push erpmicroservices/shipments-database:latest",
+    "start": "docker run --publish 5432:5432 --name shipments-database erpmicroservices/shipments-database",
     "test": "cucumber-js --tags @party_database  --require-module @babel/register --require-module @babel/polyfill  -r ./features ../shipment-features"
   },
   "repository": {
@@ -26,10 +28,12 @@
   },
   "homepage": "https://github.com/ErpMicroServices/shipment-database#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0-rc.0",
     "babel-cli": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
     "chai": "^4.3.0",
-    "@cucumber/cucumber": "^7.0.0-rc.0",
+    "dotenv": "^16.0.3",
+    "node-flywaydb": "^3.0.7",
     "pg-promise": "^10.9.2"
   }
 }

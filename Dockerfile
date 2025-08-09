@@ -1,10 +1,12 @@
-FROM postgres:10
+FROM postgres:latest
 
-ENV POSTGRES_DB=shipments_database
-ENV POSTGRES_USER=shipments_database
-ENV POSTGRES_PASSWORD=shipments_database
+ENV POSTGRES_DB=shipments
+ENV POSTGRES_USER=shipments
+ENV POSTGRES_PASSWORD=shipments
 
-RUN apt-get update -qq && \
-    apt-get install -y apt-utils postgresql-contrib
+# Copy all migration files to init directory
+# PostgreSQL will execute these in alphabetical order on first run
+COPY sql/V_ship*.sql /docker-entrypoint-initdb.d/
 
-COPY build/database_up.sql /docker-entrypoint-initdb.d/
+# Ensure the container uses UTF-8 encoding
+ENV LANG=en_US.utf8
